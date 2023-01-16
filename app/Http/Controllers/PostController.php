@@ -21,6 +21,11 @@ class PostController extends Controller
         return view('posts/edit')->with(['post' => $post]);
     }
 
+    public function create()
+    {
+        return view('posts/edit')->with(['post' => $post]);
+    }
+
     public function store(Post $post, PostRequest $request)
     {
         $input = $request['post'];
@@ -28,4 +33,9 @@ class PostController extends Controller
         return redirect('/posts/' . $post->id);
     }
 
+    public function delete(Post $post)
+    {
+        $post->delete();
+        return redirect('/');
+    }
 }
