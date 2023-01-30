@@ -12,6 +12,12 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        {{ __('Dashboard') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('index')" :active="request()->routeIs('index')">
+                        {{ __('Index') }}
+                    </x-nav-link>
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">{{ __('Dashboard') }}</x-nav-link>
                     <x-nav-link :href="route('index')" :active="request()->routeIs('index')">{{ __('Index') }}</x-nav-link>
                 </div>
@@ -35,7 +41,14 @@
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Profile') }}
-                        </x-dropdown-link>
+                    </x-dropdown-link>
+                        
+                    <x-app-layout>
+                        <x-slot name="header">
+                            　（ヘッダー名）
+                        </x-slot>
+                       (各ブレードファイルの中身)
+                    </x-app-layout>
 
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
