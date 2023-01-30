@@ -39,7 +39,14 @@
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Profile') }}
-                        </x-dropdown-link>
+                    </x-dropdown-link>
+                        
+                    <x-app-layout>
+                        <x-slot name="header">
+                            　（ヘッダー名）
+                        </x-slot>
+                       (各ブレードファイルの中身)
+                    </x-app-layout>
 
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
