@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->BigInteger('user_id')->unsigned();
             $table->BigInteger('type_id')->unsigned();
-            $table->BigInteger('date');
+            $table->date('date');
             $table->string('was attended');
             $table->timestamps();
         });
