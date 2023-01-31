@@ -16,13 +16,13 @@ class TypeSeeder extends Seeder
     public function run()
     {
         DB::table('types')->insert([
-            'subject' => "math"
+            'subject' => "Math"
         ]);
          DB::table('types')->insert([
-            'subject' => "japanese"
+            'subject' => "Japanese"
         ]);
          DB::table('types')->insert([
-            'subject' => "english"
+            'subject' => "English"
         ]);
     }
 }
