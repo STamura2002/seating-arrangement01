@@ -9,6 +9,11 @@
     <body>
         <h1>Blog Name</h1>
         <a href="/posts/create">create</a>
+        <x-app-layout>
+        <x-slot name="header">
+        </x-slot>
+        </x-app-layout>
+        <div>{{ Auth::user()->name }}</div>
         <div class='posts'>
             @foreach ($posts as $post)
                 <div class='post'>
