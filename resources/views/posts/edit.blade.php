@@ -6,6 +6,10 @@
     </head>
     <body>
         <h1 class="title">編集画面</h1>
+        <x-app-layout>
+        <x-slot name="header">
+        </x-slot>
+        </x-app-layout>
     <div class="content">
         <form action="/posts/{{ $post->id }}" method="POST">
             @csrf
