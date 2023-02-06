@@ -20,6 +20,7 @@
                         @method('DELETE')
                     <button type="button" onclick="deletePost({{ $post->id }})">delete</button> 
                 </form>
+                <div> Auth::user()->name </div>
                 <script>
                 function deletePost(id) {
                     'use strict'

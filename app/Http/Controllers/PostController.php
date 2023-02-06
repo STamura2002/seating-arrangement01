@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Post;
 use App\Models\Category;
 
 class PostController extends Controller
@@ -11,12 +10,8 @@ class PostController extends Controller
     public function index(Post $post)
     {
         return view('posts/index')->with(['posts' => $post->getPaginateByLimit()]);
-
-    public function create()
-    {
-        return view('posts/create');
     }
-
+    
     public function edit(Post $post)
     {
         return view('posts/edit')->with(['post' => $post]);
