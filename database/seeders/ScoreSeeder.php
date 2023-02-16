@@ -15,8 +15,10 @@ class ScoreSeeder extends Seeder
     public function run()
     {
         DB::table('scores')->insert([
-                '' => '',
-                '' => '',
+                'id' => '',
+                'user_id' => '',
+                'type_id' => '',
+                'deviation' => '',
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime(),
                 ]);
