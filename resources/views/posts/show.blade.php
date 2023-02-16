@@ -11,6 +11,10 @@
         <h1 class="title">
             {{ $post->title }}
         </h1>
+        <x-app-layout>
+        <x-slot name="header">
+        </x-slot>
+        </x-app-layout>
         <div class="content">
             <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
             <div class="content__post">
