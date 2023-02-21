@@ -17,7 +17,6 @@ Route::controller(UserController::class)->middleware(['auth'])->group(function()
     Route::delete('/users/{post}', 'delete')->name('delete');
     Route::get('/users/{post}/edit', 'edit')->name('edit');
     // Route::get('/posts/{')
-});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
